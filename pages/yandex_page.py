@@ -8,4 +8,4 @@ class MainYandexPage(BasePage):
     CLEAR_SEARCH = '//input[@class="input__control"]'
     SEC_BUTTON = '//div[text()="Найти"]/ancestor::button'
     PIC_BUTTON = '//span[text()="Картинки"]'
-    PIC_PUSH = '//*[@id="2f2529d63771e678d57d4888368eee0e"]/div'
+    PIC_PUSH = '//span[text()="Видео"]' # тест
