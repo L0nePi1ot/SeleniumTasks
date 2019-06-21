@@ -12,7 +12,7 @@ class BasePage:
     def __init__(self):
         chrome_options = Options()
         chrome_options.add_argument("--window-size=1920,1080")
-        self.driver = webdriver.Chrome(executable_path='G:/Projects/SeleniumTasks/webdrivers/chromedriver.exe',
+        self.driver = webdriver.Chrome(executable_path='C:/PycharmProjects/SeleniumTasks/webdrivers/chromedriver.exe',
                                   chrome_options=chrome_options)
 
     def get_element(self, xpath: str):
@@ -54,13 +54,8 @@ class BasePage:
         element = self.get_element(xpath=xpath)
         element.clear()
 
-    def hover(self, xpath):
+    def element_hover(self, xpath):
 
-        #element = self.driver.find_element_by_link_text(xpath=xpath)
-        #hov = ActionChains(self.driver).move_to_element(element)
-        #hov.perform()
-
-        hover = selfdriver.get_element(xpath=xpath)  # Наведение мыши
-        hover = ActionChains(driver).move_to_element(hover).perform()
-        hover.perform()
-        driver.get_element("//*[@id=\"result\"]/div[1]/div/div[1]/a/div[2]/div[1]/div[2]/div[1]").click()
+        element = self.get_element(xpath=xpath)
+        action_chains = ActionChains(self.driver)
+        action_chains.move_to_element(element).perform()

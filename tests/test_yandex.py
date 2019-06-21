@@ -12,6 +12,8 @@ def test_yandex():
     page.fill_input(xpath=page.CLEAR_SEARCH, value='Airbus')    # 5
     page.click(xpath=page.SEC_BUTTON)
     page.click(xpath=page.PIC_BUTTON)
-    page.hover(xpath=page.PIC_PUSH)
+    #page.click(xpath=page.PIC_PUSH)
+    page.element_hover(xpath=page.PIC_PUSH)
+
 
     print()
